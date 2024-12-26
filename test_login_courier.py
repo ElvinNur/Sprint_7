@@ -1,13 +1,8 @@
 import pytest
 import requests
-import random
-import string
+from config import BASE_URL
+from helpers import _generate_random_string
 
-BASE_URL = "https://qa-scooter.praktikum-services.ru/api/v1"
-
-def _generate_random_string(length=10):
-    letters = string.ascii_lowercase
-    return ''.join(random.choice(letters) for _ in range(length))
 
 class TestCourierLogin:
     
